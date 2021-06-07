@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-body {
-  margin: 0px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 * {
-  font-family: "Pacifico";
   box-sizing: border-box;
 }
 
@@ -25,6 +25,7 @@ header {
   background-color: #FFF;
   padding: 15px;
   animation: Up 500ms;
+  font-family: "Pacifico";
 }
 header h2 {
   margin: 0;
@@ -40,6 +41,7 @@ header .links button {
   color: #FFF;
   cursor: pointer;
   outline: none;
+  font-family: "Pacifico", sans-serif;
 }
 header .links button:nth-child(1) {
   background-color: #edf2f4;
@@ -71,6 +73,7 @@ header .show {
   padding: 0.5em 1.5em 0.5em 1.5em;
   border-radius: 5px;
   outline: none;
+  font-family: "Pacifico", sans-serif;
 }
 @media (max-width: 800px) {
   header .links {
@@ -82,25 +85,42 @@ header .show {
 }
 
 .menu {
+  position: fixed;
+  top: 4.5em;
+  right: 1em;
   display: none;
-  background-color: #2b2d42;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100vw;
+  flex-direction: column;
   padding: 10px;
-  animation: Up 500ms;
+  background-color: #edf2f4;
+  border-radius: 5px;
+  animation: Up 250ms;
 }
 .menu button {
-  background-color: #FFF;
+  background-color: #8d99ae;
   border: none;
+  margin: 2.5px;
+  padding: 0.5em 1rem 0.5em 1rem;
+  width: 40vw;
   border-radius: 5px;
   outline: none;
+  font-family: "Pacifico", sans-serif;
+  font-size: 1em;
+  color: #fff;
 }
 
 @media (max-width: 800px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
   header h2 {
     font-size: 2em;
+  }
+
+  .presentation {
+    margin-top: 5em;
   }
 }
 
