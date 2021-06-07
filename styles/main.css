@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 html, body {
   margin: 0;
@@ -153,11 +154,13 @@ header .show {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  animation: Up 500ms;
+  font-family: "Pacifico", sans-serif;
 }
 .cards .card {
   width: min-content;
   padding: 5px;
-  box-shadow: 0 0 10px #CCC;
+  box-shadow: 0 0 10px #ccc;
   margin: 15px;
   font-family: "Inconsolata", sans-serif;
   font-size: 2em;
@@ -190,7 +193,7 @@ header .show {
   .cards .card {
     width: min-content;
     padding: 5px;
-    box-shadow: 0 0 10px #CCC;
+    box-shadow: 0 0 10px #ccc;
     margin: 15px;
     font-family: "Inconsolata", sans-serif;
     font-size: 1.5em;

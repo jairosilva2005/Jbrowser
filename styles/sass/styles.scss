@@ -1,6 +1,7 @@
-@use "abstracts/text";
 @use "abstracts/colors";
 @use "components/cards";
+@use "fonts/inconsolata";
+@use "fonts/pacifico";
 
 html, body {
 	margin: 0;
@@ -40,7 +41,7 @@ html, body {
 }
 
 header {
-	@include text.font;
+	@include pacifico.pacifico;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -56,7 +57,7 @@ header {
 
 	.links {
 		button {
-			@include text.font;
+			@include pacifico.pacifico;
 			margin-right: 0.3em;
 			padding: 0.2em 1.3em 0.2em 1.3em;
 			border: solid 2px #FFF;
@@ -98,7 +99,7 @@ header {
 	}
 
 	.show {
-		@include text.font;
+		@include pacifico.pacifico;
 		display: none;
 		background-color: #2b2d42;
 		border: none;
@@ -133,7 +134,7 @@ header {
 	animation: Up 250ms;
 
 	button {
-		@include text.font;
+		@include pacifico.pacifico;
 		background-color: #8d99ae;
 		border: none;
 		margin: 2.5px;
@@ -165,7 +166,7 @@ header {
 	}
 
 	p {
-		@include text.font;
+		@include pacifico.pacifico;
 		font-size: 5em;
 		color: colors.$black-blue;
 
@@ -186,6 +187,8 @@ header {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+  animation: Up 500ms;
+  @include pacifico.pacifico;
 	.card {
 		@include cards.card;
 	}
