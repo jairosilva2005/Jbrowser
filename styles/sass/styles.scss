@@ -1,0 +1,224 @@
+@use "abstracts/text";
+@use "abstracts/colors";
+@use "components/cards";
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@keyframes Up {
+	0% {
+		transform: translateY(20px);
+		opacity: 0%;
+	}
+
+	100% {
+		transform: translateY(0px);
+		opacity: 100%;
+	}
+
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+
+}
+
+header {
+	@include text.font;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #FFF;
+	padding: 15px;
+	animation: Up 500ms;
+
+	h2 {
+		margin: 0;
+		font-size: 2.5em;
+		color: #2b2d42;
+	}
+
+	.links {
+		button {
+			@include text.font;
+			margin-right: 0.3em;
+			padding: 0.2em 1.3em 0.2em 1.3em;
+			border: solid 2px #FFF;
+			border-radius: 10px;
+			font-size: 1.2em;
+			color: #FFF;
+			cursor: pointer;
+			outline: none;
+		}
+
+		button:nth-child(1) {
+			background-color: colors.$light-gray;
+			color: #555;
+		}
+
+		button:nth-child(1):hover {
+			background-color: #d7dde0;
+			border: solid 2px colors.$light-gray;
+		}
+
+		button:nth-child(2) {
+			background-color: colors.$gray;
+		}
+
+		button:nth-child(2):hover {
+			background-color: #a1adc2;
+			border: solid 2px colors.$gray;
+		}
+
+		button:nth-child(3) {
+			background-color: colors.$black-blue;
+		}
+
+		button:nth-child(3):hover {
+			background-color: #626585;
+			border: solid 2px colors.$black-blue;
+		}
+
+	}
+
+	.show {
+		@include text.font;
+		display: none;
+		background-color: #2b2d42;
+		border: none;
+		color: #FFF;
+		padding: 0.5em 1.5em 0.5em 1.5em;
+		border-radius: 5px;
+		outline: none;
+	}
+
+	@media (max-width:800px) {
+		.links {
+			display: none;
+		}
+
+		.show {
+			display: initial;
+		}
+
+	}
+
+}
+
+.menu {
+	position: fixed;
+	top: 4.5em;
+	right: 1em;
+	display: none;
+	flex-direction: column;
+	padding: 10px;
+	background-color: #edf2f4;
+	border-radius: 5px;
+	animation: Up 250ms;
+
+	button {
+		@include text.font;
+		background-color: #8d99ae;
+		border: none;
+		margin: 2.5px;
+		padding: 0.5em 1rem 0.5em 1rem;
+		width: 40vw;
+		border-radius: 5px;
+		outline: none;
+		font-size: 1em;
+		color: #fff;
+	}
+
+}
+
+.presentation {
+	padding: 0 5em 0 5em;
+	animation: Up 500ms;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	img {
+		width: 30em;
+		margin-right: 5em;
+		animation-name: rotate;
+		animation-duration: 100s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	p {
+		@include text.font;
+		font-size: 5em;
+		color: colors.$black-blue;
+
+		span:nth-child(1) {
+			color: colors.$light-red;
+		}
+
+		span:nth-child(2) {
+			color: colors.$light-blue;
+		}
+
+	}
+
+}
+
+.cards {
+	margin-top: 5em;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	.card {
+		@include cards.card;
+	}
+}
+
+@media (max-width:800px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		h2 {
+			font-size: 2em;
+		}
+
+	}
+
+	.presentation {
+		text-align: center;
+		margin-top: 5em;
+		img {
+			display: none;
+		}
+		p {
+			font-size: 3em;
+		}
+	}
+
+	.cards {
+		.card {
+			@include cards.card-mobile;
+		}
+	}
+
+}

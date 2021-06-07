@@ -1,0 +1,22 @@
+@mixin font($size, $color) {
+	font-family: "Inconsolata", sans-serif;
+	font-size: $size;
+	color: $color;
+	white-space: nowrap;
+}
+
+@mixin card {
+	width: min-content;
+	padding: 5px;
+	box-shadow: 0 0 10px #CCC;
+	margin: 15px;
+	@include font(2em, #333);
+}
+
+@mixin card-mobile {
+	width: min-content;
+	padding: 5px;
+	box-shadow: 0 0 10px #CCC;
+	margin: 15px;
+	@include font(1.5em, #333);
+}
