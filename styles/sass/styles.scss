@@ -193,7 +193,7 @@ header {
   background-color: #fff;
   border-top: solid 2px #ddd;
   font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
+  @include inconsolata.inconsolata;
   animation: Up 500ms;
 
   .copyright {
@@ -229,11 +229,11 @@ header {
       flex-direction: column;
       div {
         h3 {
-          width: 100vw;
+          width: 50vw;
         }
 
         p {
-          width: 100vw;
+          width: 70vw;
           font-size: 0.8em;
         }
       }

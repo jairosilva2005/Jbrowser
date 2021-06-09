@@ -175,7 +175,7 @@ header .show {
   background-color: #fff;
   border-top: solid 2px #ddd;
   font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inconsolata", sans-serif;
   animation: Up 500ms;
 }
 .footer .copyright {
@@ -205,10 +205,10 @@ header .show {
     flex-direction: column;
   }
   .footer .footer-cards div h3 {
-    width: 100vw;
+    width: 50vw;
   }
   .footer .footer-cards div p {
-    width: 100vw;
+    width: 70vw;
     font-size: 0.8em;
   }
 }
