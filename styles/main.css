@@ -176,6 +176,7 @@ header .show {
   border-top: solid 2px #ddd;
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
+  animation: Up 500ms;
 }
 .footer .copyright {
   text-align: center;
@@ -197,6 +198,9 @@ header .show {
 }
 
 @media (max-width: 800px) {
+  .footer .copyright {
+    font-size: 0.8em;
+  }
   .footer .footer-cards {
     flex-direction: column;
   }
