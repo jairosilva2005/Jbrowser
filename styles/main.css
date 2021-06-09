@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -36,7 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 15px;
   animation: Up 500ms;
 }
@@ -49,10 +50,10 @@ header .links button {
   font-family: "Pacifico", sans-serif;
   margin-right: 0.3em;
   padding: 0.2em 1.3em 0.2em 1.3em;
-  border: solid 2px #FFF;
+  border: solid 2px #fff;
   border-radius: 10px;
   font-size: 1.2em;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   outline: none;
 }
@@ -83,7 +84,7 @@ header .show {
   display: none;
   background-color: #2b2d42;
   border: none;
-  color: #FFF;
+  color: #fff;
   padding: 0.5em 1.5em 0.5em 1.5em;
   border-radius: 5px;
   outline: none;
@@ -168,6 +169,45 @@ header .show {
   white-space: nowrap;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-top: solid 2px #ddd;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer .copyright {
+  text-align: center;
+}
+.footer .footer-cards {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.footer .footer-cards div {
+  width: 33.3vw;
+}
+.footer .footer-cards div p {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-cards div p svg {
+  margin-right: 0.6em;
+}
+
+@media (max-width: 800px) {
+  .footer .footer-cards {
+    flex-direction: column;
+  }
+  .footer .footer-cards div h3 {
+    width: 100vw;
+  }
+  .footer .footer-cards div p {
+    width: 100vw;
+    font-size: 0.8em;
+  }
+}
 @media (max-width: 800px) {
   header {
     position: fixed;
