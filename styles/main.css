@@ -169,6 +169,48 @@ header .show {
   white-space: nowrap;
 }
 
+.comments {
+  width: 95vw;
+  padding: 1em;
+  margin: 2em;
+  box-shadow: 0 0 20px #DCDCDC;
+  animation: Up 500ms;
+}
+.comments .comment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.comments .comment .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+}
+.comments .comment .info img {
+  width: 90%;
+  border: none;
+  border-radius: 0.5em;
+}
+.comments .comment .info h3 {
+  margin: 0;
+  color: #464646;
+  width: 90%;
+  font-size: 2.4em;
+  font-family: "Inconsolata", sans-serif;
+}
+.comments .comment .report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comments .comment .report p {
+  width: 60%;
+  font-size: 2em;
+  margin: 0;
+  font-family: "Inconsolata", sans-serif;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -240,9 +282,14 @@ header .show {
     box-shadow: 0 0 10px #ccc;
     margin: 15px;
     font-family: "Inconsolata", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #333;
     white-space: nowrap;
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
   }
 }
 
