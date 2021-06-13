@@ -173,19 +173,20 @@ header .show {
   width: 95vw;
   padding: 1em;
   margin: 2em;
-  box-shadow: 0 0 20px #DCDCDC;
   animation: Up 500ms;
 }
 .comments .comment {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 20px #dcdcdc;
+  padding: 1.5em;
 }
 .comments .comment .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  height: 60vh;
+  height: 35vh;
 }
 .comments .comment .info img {
   width: 90%;
@@ -196,7 +197,7 @@ header .show {
   margin: 0;
   color: #464646;
   width: 90%;
-  font-size: 2.4em;
+  font-size: 2em;
   font-family: "Inconsolata", sans-serif;
 }
 .comments .comment .report {
@@ -206,8 +207,9 @@ header .show {
 }
 .comments .comment .report p {
   width: 60%;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0;
+  text-align: justify;
   font-family: "Inconsolata", sans-serif;
 }
 
@@ -287,9 +289,24 @@ header .show {
     white-space: nowrap;
   }
 
-  .comment {
+  .comments {
+    margin: 0;
+    width: 100vw;
+  }
+  .comments .comment {
     display: flex;
     flex-direction: column;
+  }
+  .comments .comment .info {
+    justify-content: space-evenly;
+    height: 30em;
+  }
+  .comments .comment .report {
+    padding: 0;
+    height: 15em;
+  }
+  .comments .comment .report p {
+    width: 70vw;
   }
 }
 
