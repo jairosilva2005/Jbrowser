@@ -39,6 +39,14 @@ body {
   }
 }
 
+@mixin layout {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
 header {
   @include pacifico.pacifico;
   display: flex;
@@ -231,6 +239,25 @@ header {
   }
 }
 
+.ads {
+  @include inconsolata.inconsolata;
+  width: 100vw;
+  padding-left: 1em;
+  padding-right: 1em;
+  #{&}__ad {
+    @include layout;
+    font-size: 1em;
+    color: #333;
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 0.2em;
+      i {
+        margin-right: 0.4em;
+      }
+    }
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -330,6 +357,14 @@ header {
         p {
           width: 70vw;
         }
+      }
+    }
+  }
+
+  .ads {
+    #{&}__ad {
+      .title {
+        font-size: 1.3em;
       }
     }
   }

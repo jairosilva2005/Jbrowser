@@ -213,6 +213,29 @@ header .show {
   font-family: "Inconsolata", sans-serif;
 }
 
+.ads {
+  font-family: "Inconsolata", sans-serif;
+  width: 100vw;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.ads .ads__ad {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  color: #333;
+}
+.ads .ads__ad .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.2em;
+}
+.ads .ads__ad .title i {
+  margin-right: 0.4em;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -307,6 +330,10 @@ header .show {
   }
   .comments .comment .report p {
     width: 70vw;
+  }
+
+  .ads .ads__ad .title {
+    font-size: 1.3em;
   }
 }
 
