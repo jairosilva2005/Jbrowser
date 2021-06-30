@@ -3,8 +3,7 @@
 @use "fonts/inconsolata";
 @use "fonts/pacifico";
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -27,6 +26,7 @@ body {
     transform: translateY(0px);
     opacity: 100%;
   }
+
 }
 
 @keyframes rotate {
@@ -37,6 +37,7 @@ body {
   100% {
     transform: rotate(360deg);
   }
+
 }
 
 @mixin layout {
@@ -102,6 +103,7 @@ header {
       background-color: #626585;
       border: solid 2px colors.$black-blue;
     }
+
   }
 
   .show {
@@ -115,7 +117,7 @@ header {
     outline: none;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width:800px) {
     .links {
       display: none;
     }
@@ -123,7 +125,9 @@ header {
     .show {
       display: initial;
     }
+
   }
+
 }
 
 .menu {
@@ -149,6 +153,7 @@ header {
     font-size: 1em;
     color: #fff;
   }
+
 }
 
 .presentation {
@@ -180,7 +185,9 @@ header {
     span:nth-child(2) {
       color: colors.$light-blue;
     }
+
   }
+
 }
 
 .cards {
@@ -190,32 +197,36 @@ header {
   flex-wrap: wrap;
   animation: Up 500ms;
   @include pacifico.pacifico;
+
   .card {
     @include cards.card;
   }
+
 }
 
 .comments {
-  width: 95vw;
   padding: 1em;
-  margin: 2em;
   animation: Up 500ms;
+
   .comment {
     display: flex;
     flex-direction: row;
     box-shadow: 0 0 20px #dcdcdc;
     padding: 1.5em;
+
     .info {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      height: 35vh;
+      height: 35%;
+
       img {
         width: 90%;
         border: none;
         border-radius: 0.5em;
       }
+
       h3 {
         margin: 0;
         color: rgb(70, 70, 70);
@@ -223,11 +234,14 @@ header {
         font-size: 2em;
         @include inconsolata.inconsolata;
       }
+
     }
+
     .report {
       display: flex;
       justify-content: center;
       align-items: center;
+
       p {
         width: 60%;
         font-size: 1.5em;
@@ -235,27 +249,36 @@ header {
         text-align: justify;
         @include inconsolata.inconsolata;
       }
+
     }
+
   }
+
 }
 
 .ads {
   @include inconsolata.inconsolata;
-  width: 100vw;
   padding-left: 1em;
   padding-right: 1em;
-  #{&}__ad {
+  animation: Up 500ms;
+
+  &__ad {
     @include layout;
     font-size: 1em;
     color: #333;
+
     .title {
       font-size: 1.5rem;
       margin-bottom: 0.2em;
+
       i {
         margin-right: 0.4em;
       }
+
     }
+
   }
+
 }
 
 .footer {
@@ -286,18 +309,24 @@ header {
         svg {
           margin-right: 0.6em;
         }
+
       }
+
     }
+
   }
+
 }
 
-@media (max-width: 800px) {
+@media (max-width:800px) {
   .footer {
     .copyright {
       font-size: 0.8em;
     }
+
     .footer-cards {
       flex-direction: column;
+
       div {
         h3 {
           width: 50vw;
@@ -307,12 +336,16 @@ header {
           width: 70vw;
           font-size: 0.8em;
         }
+
       }
+
     }
+
   }
+
 }
 
-@media (max-width: 800px) {
+@media (max-width:800px) {
   header {
     position: fixed;
     top: 0;
@@ -322,50 +355,65 @@ header {
     h2 {
       font-size: 2em;
     }
+
   }
 
   .presentation {
     text-align: center;
     margin-top: 5em;
+
     img {
       display: none;
     }
+
     p {
       font-size: 3em;
     }
+
   }
 
   .cards {
     .card {
       @include cards.card-mobile;
     }
+
   }
 
   .comments {
     margin: 0;
-    width: 100vw;
+    width: 100%;
+
     .comment {
       display: flex;
       flex-direction: column;
+
       .info {
         justify-content: space-evenly;
         height: 30em;
       }
+
       .report {
         padding: 0;
         height: 15em;
+
         p {
-          width: 70vw;
+          width: 80%;
         }
+
       }
+
     }
+
   }
 
   .ads {
-    #{&}__ad {
+    &__ad {
       .title {
         font-size: 1.3em;
       }
+
     }
+
   }
+
 }
