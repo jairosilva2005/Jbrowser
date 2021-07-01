@@ -219,11 +219,17 @@ header .show {
 .ads__ad {
   display: flex;
   flex-direction: column;
-  background-color: #f7f7f7;
+  background-color: #FFF;
   padding: 1em;
   margin-bottom: 0.5em;
+  border: solid 1px #DDD;
+  box-shadow: 0 0 15px #DDD;
   font-size: 1em;
   color: #333;
+  transition: 500ms;
+}
+.ads__ad:hover {
+  box-shadow: none;
 }
 .ads__ad .title {
   font-size: 1.5rem;

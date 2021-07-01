@@ -43,9 +43,11 @@ html, body {
 @mixin layout {
   display: flex;
   flex-direction: column;
-  background-color: #f7f7f7;
+  background-color: #FFF;
   padding: 1em;
   margin-bottom: 0.5em;
+  border: solid 1px #DDD;
+  box-shadow: 0 0 15px #DDD;
 }
 
 header {
@@ -266,6 +268,11 @@ header {
     @include layout;
     font-size: 1em;
     color: #333;
+    transition: 500ms;
+
+    &:hover {
+      box-shadow: none;
+    }
 
     .title {
       font-size: 1.5rem;
