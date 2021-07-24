@@ -7,10 +7,6 @@ html, body {
 
 * {
   box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 @keyframes Up {
@@ -136,6 +132,10 @@ header .show {
   animation-duration: 100s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .presentation p {
   font-family: "Pacifico", sans-serif;
@@ -257,7 +257,7 @@ header .show {
   padding: 20px;
 }
 .footer .footer-cards div {
-  width: 33.3vw;
+  width: 100%;
 }
 .footer .footer-cards div p {
   display: flex;
