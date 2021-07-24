@@ -266,6 +266,13 @@ header .show {
 .footer .footer-cards div p svg {
   margin-right: 0.6em;
 }
+.footer .footer-cards div p a {
+  text-decoration: none;
+  color: #000;
+}
+.footer .footer-cards div p a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 800px) {
   .footer .copyright {
